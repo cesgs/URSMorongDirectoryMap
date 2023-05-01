@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URS Morong Directory Map | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <section class="wayfinder-sub-header">
+        <nav>
+            <a href="index.html"><img src="pic/URSLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()" alt="Close"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="CampusOverview.html">Campus Overview</a></li>
+                        <li><a href="WayFinder.html">Way Finder</a></li>
+ 
+                        <li><a href="About.html">About</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()" alt="Menu"></i>
+        </nav>
+        <div class="COHead">
+            <h1>Way Finder</h1>
+            <p>Wayfinders are designed to provide users with clear and concise directions or instructions<br> help them reach their desired destination or goal.</p>
+    
+        </div>
+
+    <section class="WayFinder-Overview-Map">
+
+        <section>
+            <div class="WayFinder-row">
+                <div class="row">
+                    <div class="WayFinder-Box1"></div>    
+                    
+                    <div class="col">
+                        <h1><strong>Select your current location</strong></h1>
+                        
+                        <select style="width: 250px; height: 30px;" name="curslct1" id="curslct1" onchange="populate(this.id,'curslct2')">
+                            <option value="">Select Building</option>
+                            <option value="CashierBuilding">Cashier Building</option>
+                            <option value="OSDSBuilding">OSDS Building</option>
+                            <option value="BusinessandResourceGeneration">Business and Resource Generation</option>
+                            <option value="AmangHall">Amang Hall</option>
+                            <option value="IsidroSRodriguezBuilding">Isidro S Rodriguez Building</option>
+                            <option value="ScienceandTechnologyBuilding">Science and Technology Building</option>
+                            <option value="CollegeofScienceBuilding">College of Science Building</option>
+                            <option value="CITShopA">CIT Shop A</option>
+                            <option value="CITShopB">CIT Shop B</option>
+                            <option value="CITShopC">CIT Shop C</option>
+                            <option value="RDEPBuilding">RDEP Building</option>
+                            <option value="ELCBuilding">ELC Building</option>
+                            <option value="CITExtension">CIT Extension</option>
+                            <option value="HRMBUILDING">HRM BUILDING</option>
+                            <option value="Others">Others</option>
+                            
+                            
+                        </select>
+                        
+                        <select style="width: 250px; height: 30px;" name="curslct2" id="curslct2">
+        
+                        </select>
+                        <div class="curDiv">
+                            <div class="container">
+                                <div  class="gallery">
+                                    <a id="myImageDin1" href="pic/BuildingPic/Open1.jpg" data-lightbox="models" data-title="Image Building 1">
+                                        <img id="myImage1" src="pic/BuildingPic/Open1.jpg">
+                                    </a>
+                                   
+                                    <a id="myImageDin2" href="pic/BuildingPic/Open2.jpg" data-lightbox="models" data-title="Image Building 2">
+                                        <img id="myImage2" src="pic/BuildingPic/Open2.jpg">
+                                    </a>
+                                    <a id="myImageDin3" href="pic/BuildingPic/Open3.jpg" data-lightbox="models" data-title="Image Building 3">
+                                        <img id="myImage3" src="pic/BuildingPic/Open3.jpg">
+                                    </a>
+                                   
+                                    <a id="myImageDin4" href="pic/BuildingPic/Open4.jpg" data-lightbox="models" data-title="Image Building 4">
+                                        <img id="myImage4" src="pic/BuildingPic/Open4.jpg">
+                                    </a>
+                                    <a id="myImageDin5" href="pic/BuildingPic/Open5.jpg" data-lightbox="models" data-title="Image Building 5">
+                                        <img id="myImage5" src="pic/BuildingPic/Open5.jpg">
+                                    </a> 
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <!--Pic Gallery-->
+                      
+    
+                      <div class="col">
+                        <h1><strong>Select your desired destination</strong></h1>
+                        <select style="width: 250px; height: 30px;" name="des-slct1" id="desslct1" onchange="populate(this.id,'desslct2')" onchange="showme(value)">
+                            <option value="">Select Building</option>
+                            <option value="CashierBuilding">Cashier Building</option>
+                            <option value="OSDSBuilding">OSDS Building</option>
+                            <option value="BusinessandResourceGeneration">Business and Resource Generation</option>
+                            <option value="AmangHall">Amang Hall</option>
+                            <option value="IsidroSRodriguezBuilding">Isidro S Rodriguez Building</option>
+                            <option value="ScienceandTechnologyBuilding">Science and Technology Building</option>
+                            <option value="CollegeofScienceBuilding">College of Science Building</option>
+                            <option value="CITShopA">CIT Shop A</option>
+                            <option value="CITShopB">CIT Shop B</option>
+                            <option value="CITShopC">CIT Shop C</option>
+                            <option value="RDEPBuilding">RDEP Building</option>
+                            <option value="ELCBuilding">ELC Building</option>
+                            <option value="CITExtension">CIT Extension</option>
+                            <option value="HRMBUILDING">HRM BUILDING</option>
+                            <option value="Others">Others</option>
+                            
+                        </select>
+                        
+                        <select style="width: 250px; height: 30px;" name="desslct2" id="desslct2">
+                        </select>
+                        <div class="desDiv">
+                            <div class="container">
+                                <div  class="gallery">
+                                    <a id="desmyImageDin1" href="pic/BuildingPic/Open1.jpg" data-lightbox="models" data-title="Image Building 1">
+                                        <img id="desmyImage1" src="pic/BuildingPic/Open1.jpg">
+                                    </a>
+                                   
+                                    <a id="desmyImageDin2" href="pic/BuildingPic/Open2.jpg" data-lightbox="models" data-title="Image Building 2">
+                                        <img id="desmyImage2" src="pic/BuildingPic/Open2.jpg">
+                                    </a>
+                                    <a id="desmyImageDin3" href="pic/BuildingPic/Open3.jpg" data-lightbox="models" data-title="Image Building 3">
+                                        <img id="desmyImage3" src="pic/BuildingPic/Open3.jpg">
+                                    </a>
+                                   
+                                    <a id="desmyImageDin4" href="pic/BuildingPic/Open4.jpg" data-lightbox="models" data-title="Image Building 4">
+                                        <img id="desmyImage4" src="pic/BuildingPic/Open4.jpg">
+                                    </a>
+                                    <a id="desmyImageDin5" href="pic/BuildingPic/Open5.jpg" data-lightbox="models" data-title="Image Building 5">
+                                        <img id="desmyImage5" src="pic/BuildingPic/Open5.jpg">
+                                    </a> 
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+        </section>
+       
+
+            <button style="border-radius: 15px; margin-bottom: 50px;" onclick="wayfinderdisplaySelectedValues()">Display Selected Location</button>
+            <h3 id="WayFinderInformation"></h3>
+
+            <div class="WayFinder-Overview-Map-col">
+                <div class="WayFinder-Box2">
+                    <img id="wayfinderImg"src="pic/WayFinder3DMap-Overview.png" alt="3D Campus Map">
+                </div>
+    
+            </div>
+            
+        </div>
+        <script src="WayfinderScript.js"></script>
+    </section>
+    <!--JavaScript for Select-->
+    
+    <script>
+        function wayfinderdisplaySelectedValues() {
+        var currentselect = document.getElementById("curslct2");
+        var desiredselect = document.getElementById("desslct2");
+        var selectedValue1 = currentselect.options[currentselect.selectedIndex].text;
+        var selectedValue2 = desiredselect.options[desiredselect.selectedIndex].text;
+
+        var wayfinderImage = document.getElementById("wayfinderImg");
+      
+        if (selectedValue1 === selectedValue2){
+            document.getElementById("WayFinderInformation").innerHTML = "You selected the same location.";
+            wayfinderImage.src="pic/WayFinder3DMap-Overview.png"
+        }
+        else{
+            document.getElementById("WayFinderInformation").innerHTML = "You selected " + selectedValue1 + " to " + selectedValue2 + ".";
+            wayfinderImage.src="pic/GIFMap/"+selectedValue1+selectedValue2+".gif";
+        }
+
+
+        
+       
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script>
+        const imageSelect = document.getElementById("curslct1");
+        imageSelect.addEventListener("change", function(){
+
+            const selectValue= this.value;
+
+            const myImage1 = document.getElementById("myImage1");
+            var link1 = document.getElementById("myImageDin1");
+            myImage1.src = "pic/BuildingPic/"+selectValue+"1.jpg";
+            link1.href = "pic/BuildingPic/"+selectValue+"1.jpg";
+
+            const myImage2 = document.getElementById("myImage2");
+            var link2 = document.getElementById("myImageDin2");
+            myImage2.src = "pic/BuildingPic/"+selectValue+"2.jpg";
+            link2.href = "pic/BuildingPic/"+selectValue+"2.jpg";
+
+            const myImage3 = document.getElementById("myImage3");
+            var link3 = document.getElementById("myImageDin3");
+            myImage3.src = "pic/BuildingPic/"+selectValue+"3.jpg";
+            link3.href = "pic/BuildingPic/"+selectValue+"3.jpg";
+
+            const myImage4 = document.getElementById("myImage4");
+            var link4 = document.getElementById("myImageDin4");
+            myImage4.src = "pic/BuildingPic/"+selectValue+"4.jpg";
+            link4.href = "pic/BuildingPic/"+selectValue+"4.jpg";
+
+            const myImage5 = document.getElementById("myImage5");
+            var link5 = document.getElementById("myImageDin5");
+            myImage5.src = "pic/BuildingPic/"+selectValue+"5.jpg";
+            link5.href = "pic/BuildingPic/"+selectValue+"5.jpg";
+
+        });
+    </script>
+
+
+    <script>
+        const desimageSelect = document.getElementById("desslct1");
+        desimageSelect.addEventListener("change", function(){
+
+            const desselectValue= this.value;
+
+            const desmyImage1 = document.getElementById("desmyImage1");
+            var deslink1 = document.getElementById("desmyImageDin1");
+            desmyImage1.src = "pic/BuildingPic/"+desselectValue+"1.jpg";
+            deslink1.href = "pic/BuildingPic/"+desselectValue+"1.jpg";
+
+            const desmyImage2 = document.getElementById("desmyImage2");
+            var deslink2 = document.getElementById("desmyImageDin2");
+            desmyImage2.src = "pic/BuildingPic/"+desselectValue+"2.jpg";
+            deslink2.href = "pic/BuildingPic/"+desselectValue+"2.jpg";
+
+            const desmyImage3 = document.getElementById("desmyImage3");
+            var deslink3 = document.getElementById("desmyImageDin3");
+            desmyImage3.src = "pic/BuildingPic/"+desselectValue+"3.jpg";
+            deslink3.href = "pic/BuildingPic/"+desselectValue+"3.jpg";
+
+            const desmyImage4 = document.getElementById("desmyImage4");
+            var deslink4 = document.getElementById("desmyImageDin4");
+            desmyImage4.src = "pic/BuildingPic/"+desselectValue+"4.jpg";
+            deslink4.href = "pic/BuildingPic/"+desselectValue+"4.jpg";
+
+            const desmyImage5 = document.getElementById("desmyImage5");
+            var deslink5 = document.getElementById("desmyImageDin5");
+            desmyImage5.src = "pic/BuildingPic/"+desselectValue+"5.jpg";
+            deslink5.href = "pic/BuildingPic/"+desselectValue+"5.jpg";
+
+        });
+    </script>
+</body>
+
+<!--JavaScript for ToggleMenu-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-500px";
+    }
+</script>
+</html>

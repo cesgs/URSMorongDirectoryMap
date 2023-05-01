@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+/*Background SNT sa Header*/
+.header{
+    min-height: 10%;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pic/SNT.jpg);
+    background-position-y: 500px;
+    background-size: cover;
+    position: relative;
+}
+
+/*Nav right*/
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Nav Logo left*/
+nav img{
+    width: 200px;
+}
+/*Nav right list*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font: 13px;
+
+}
+/*Nav hover*/
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: yellow;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URS Morong Directory Map | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="about-header">
+        <nav>
+            <a href="index.html"><img src="pic/URSLogo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-window-close" onclick="hideMenu()" alt="Close"></i>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="CampusOverview.html">Campus Overview</a></li>
+                        <li><a href="WayFinder.html">Way Finder</a></li>
+               
+                        <li><a href="About.html">About</a></li>
+                    </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()" alt="Menu"></i>
+        </nav>
+        <div class="text-box-about">
+            <h1 class="abouth1">Know us more</h1>
+            <p>TThe 3D directory map is a valueable resource for navigating through our campus.
+                <br>As a website, it provides clear directions and lists the various departments, offices, and services available.
+                <br>The map is designed to help visitors, staff and students alik find their way to their desired location quickly and efficiently.
+                <br>With clear directional arrows and symbols indicationg specific locations, the directory map is easy to use and
+                <br>provides the basic needs you will find in a map. We encourage everyone to make use of this helpful tool
+                <br>to ensure a smooth and hustle-free visit.</p>
+
+        
+        </div>
+    </section>
+    <section class="researchers">
+        <h1>Our Team</h1>
+        <div class="pic-container">
+            <div class="s-box">
+                    <img src="pic/me 2x2.png" alt="">
+                    <h3>Carl Eduard S.G. Soriano</h3>
+                    <p>caredusor@gmail.com <br>San Pedro, Morong, Rizal</p>
+            </div>
+            <div class="s-box">
+                <img src="pic/ate 2x2.png" alt="">
+                <h3>Mylyn P. Belleza</h3>
+                <p>richmhy1986mb@gmail.com <br>Bagumbong, Jalajala, Rizal</p>
+            </div>
+            <div class="s-box">
+                <img src="pic/thro 2x2.png" alt="">
+                <h3>Throejan P. Subida</h3>
+                <p>throejans@gmail.com <br>Del Remedio, Cardona, Rizal</p>
+            </div>
+            <div class="s-box">
+                <img src="pic/maam 2x2.png" alt="">
+                <h3>Engr. Fredelina F. De Leon, Ma Ed</h3>
+                <p>Adviser</p>
+
+            </div>
+            
+        </div>
+    </section>
+<!--JavaScript for ToggleMenu-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+</html>

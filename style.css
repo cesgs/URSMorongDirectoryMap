@@ -102,7 +102,7 @@ nav .fa{
 .COHead h1{
     font-size: 60px;
 }
-@media all and (max-width: 900px){
+@media all and (max-width: 640px){
     .text-box{
         margin-top: 30%;
     }
